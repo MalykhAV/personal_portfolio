@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: black;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5eee6;;
+    position: sticky;
+    top: 0;
+    background-color: #4e3d5371;
+}
+.title {
+    font-size: 1.5vw;
+    margin: 1vw;
+}
+.title:hover{
+    color:#9b4a89;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a {
+    text-decoration: none;
+    color: #f5eee6;
+    font-size: 1.5vw;
+    padding: 2vw 2vw;
+    display: block;
+}
+.navbar-links li a:hover{
+    color:#9b4a89;
+}
+
+section{
+    padding: 5vw 2vw;
+    border-bottom: 1px solid rgba(245,238,230,.5);
+}
+#welcome-section {
+    background-image: url(images/pexels-anni-roenkae-3961199.jpg);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    height: auto;
+    width: 100%;
+}
+h1, h2 {
+    
+    font-weight: 700;
+    font-size: 6vw;
+    line-height: 8.5vw;
+    position: relative;
+    padding: 0.5vw 0;
+}
+h1:hover {
+    color: #ffeaf3;
+}
+h2:hover {
+    color: #ffeaf3;
+}
+p {
+    color:#c59bbd;
+    font-size: 1.5vw;
+    margin: 1vw 0;
+}
+.project-section {
+    display: flex;
+
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4vw;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.project-image {
+    /* height: calc(100% - 5rem); */
+    max-width: 45vw;
+    width: 100%;
+    object-fit: cover;
+}
+.project-title {
+    font-size: 17px;
+    padding: 1rem 0.3rem;
+    margin: 0 auto;
+}
+.project-content p {
+    font-size: 1.5vw;
+}
+.project-content ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column
+}
+.project-content li {
+    list-style: none;
+}
+.project-content li a {
+    text-decoration: none;
+    color: #9b4a89;
+    font-size: 1.5vw;
+    padding: 2vw 2vw;
+    display: block;
+}
+.project-content li a:hover{
+    color:#9b4a89;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    /* max-width: 33vw; */
+    width: 100%;
+    margin-top: 5vw;
+    flex-wrap: wrap;
+  }
+  
+.contact-links a {
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #9b4a89;
+    padding: 1vw 1vw;
+}
+  
+.contact-details {
+    font-size: 1.5vw;
+    transition: transform 0.4s ease-out;
+}
+  
+  
+.contact-details:hover {
+    transform: translateY(-8px);
+  }
+
+footer {
+    text-align: center;
+    color: #af99a3;
+    background-image: url(images/pexels-anni-roenkae-3961199.jpg);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    margin: 0;
+    padding: 0.5vw 0;
+}
+footer p {
+    font-size: 1vw;
+}
+@media(max-width: 980px) {
+    .project-content p {
+        font-size: 2.3vw;
+        margin: 5px 0;
+    }
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        font-size: 3vw;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 960px;
+    }
+    .project-content {
+        padding: 0 100px;
+    }
+    
+}
+@media(max-width: 575px) {
+    .nav {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 3vw;
+    }
+    .navbar-links li a {
+        font-size: 4vw;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project-image {
+        /* height: calc(100% - 5rem); */
+        max-width: 70vw;
+        width: 100%;
+        object-fit: cover;
+    }
+    .project-content p {
+        font-size: 3vw;
+        margin: 5px 0;
+    }
+    p {
+        font-size: 3vw;
+    }
+}
