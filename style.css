@@ -88,8 +88,12 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4vw;
+    /* grid-template-areas:
+        "image image"
+        "title links"
+        "content ."; */
+    grid-template-rows: auto;
     width: 100%;
-    max-width: 960px;
     margin: 0 auto;
     margin-bottom: 3em;
 }
@@ -97,7 +101,11 @@ p {
     /* height: calc(100% - 5rem); */
     max-width: 45vw;
     width: 100%;
+    height: auto;
     object-fit: cover;
+    padding: 0.3em;
+    border: 1px solid #c59bbd;
+    grid-area: image;
 }
 .project-title {
     font-size: 17px;
@@ -176,25 +184,34 @@ footer p {
 }
 
 @media(max-width: 768px) {
-    body {
-        font-size: 3vw;
-    }
+    /* body {
+        font-size: 4vw;
+    } */
     .projects-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        max-width: 960px;
+        /* max-width: 960px; */
     }
     .project-content {
-        padding: 0 100px;
+        /* padding: 0 100px; */
+        font-size: 3vw;
     }
-    
+    .project-content p {
+        font-size: 3vw;
+        margin: 5px 0;
+    }
+    .project-image {
+        /* height: calc(100% - 5rem); */
+        max-width: 66vw;
+        width: 100%;
+    }
 }
 @media(max-width: 575px) {
     .nav {
         flex-direction: column;
     }
     .title {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .navbar-links li a {
         font-size: 4vw;
@@ -205,13 +222,12 @@ footer p {
         grid-template-columns: repeat(1, 1fr);
     }
     .project-image {
-        /* height: calc(100% - 5rem); */
         max-width: 70vw;
         width: 100%;
         object-fit: cover;
     }
     .project-content p {
-        font-size: 3vw;
+        font-size: 4vw;
         margin: 5px 0;
     }
     p {
